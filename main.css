@@ -1,2 +1,28 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f1f5f9;
+  color: #1e293b;
+}
 
-/*# sourceMappingURL=main.css.map */
+h1 {
+  color: #2563eb;
+}
+
+nav {
+  background-color: #2563eb;
+  padding: 1rem;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+}
+nav a {
+  color: white;
+  text-decoration: none;
+}
+nav a:hover {
+  text-decoration: underline;
+}/*# sourceMappingURL=main.css.map */
