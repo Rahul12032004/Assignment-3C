@@ -62,4 +62,26 @@ nav a {
 }
 nav a:hover {
   text-decoration: underline;
+}
+
+.home {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+}
+.home__content {
+  max-width: 50rem;
+}
+.home__title {
+  color: #2563eb;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+.home__description {
+  color: #1e293b;
+  font-size: 1.25rem;
+  line-height: 1.6;
 }/*# sourceMappingURL=main.css.map */
