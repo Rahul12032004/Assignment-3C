@@ -1,74 +1,65 @@
 
 @import "config";
 
-$primary-color: #2563eb;
-$secondary-color: #f1f5f9;
-$text-color: #1e293b;
-$font-family: Arial, sans-serif;
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   font-family: $font-family;
   background-color: $secondary-color;
   color: $text-color;
+  line-height: 1.6;
 }
 
-h1 {
-  color: $primary-color;
-}
-
-nav {
+.site-header {
   background-color: $primary-color;
-  padding: 1rem;
+  padding: 1rem 2rem;
+}
 
-  ul {
-    list-style: none;
-    display: flex;
-    gap: 1rem;
-    margin: 0;
-    padding: 0;
-  }
+.site-nav {
+  max-width: 75rem;
+  margin-inline: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
 
-  a {
+  &__logo {
     color: white;
+    font-size: 1.5rem;
+    font-weight: 700;
     text-decoration: none;
-
-    &:hover {
-      text-decoration: underline;
-    }
   }
-}
 
-@mixin button-style($background-color) {
-  background-color: $background-color;
-  color: white;
-  padding: 0.75rem 1.5rem;
-  border: none;
-  border-radius: 0.5rem;
-  cursor: pointer;
-}
-
-.button-primary {
-  @include button-style($primary-color);
-}
-
-.button-secondary {
-  @include button-style($text-color);
-}
-
-nav {
-  ul {
+  &__links {
     display: flex;
+    flex-wrap: wrap;
     gap: 1.5rem;
     list-style: none;
-  }
 
-  a {
-    color: $primary-color;
-    text-decoration: none;
+    a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
 
-    &:hover {
-      text-decoration: underline;
+      &:hover,
+      &:focus-visible {
+        text-decoration: underline;
+      }
     }
   }
 }
+
 @import "home";
+
+@media (max-width: 40rem) {
+  .site-nav {
+    flex-direction: column;
+
+    &__links {
+      justify-content: center;
+      gap: 1rem;
+    }
+  }
+}
