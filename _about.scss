@@ -1,0 +1,32 @@
+
+.about {
+  max-width: 75rem;
+  margin-inline: auto;
+  padding: 4rem 2rem;
+
+  &__title {
+    color: $primary-color;
+    font-size: 2.5rem;
+    margin-block-end: 1.5rem;
+  }
+
+  &__description {
+    max-width: 45rem;
+    font-size: 1.125rem;
+    line-height: 1.8;
+  }
+
+  &__skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-block-start: 2rem;
+  }
+
+  &__skill {
+    background-color: $primary-color;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+  }
+}
