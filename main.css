@@ -49,4 +49,17 @@ nav a:hover {
   border: none;
   border-radius: 0.5rem;
   cursor: pointer;
+}
+
+nav ul {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+}
+nav a {
+  color: #2563eb;
+  text-decoration: none;
+}
+nav a:hover {
+  text-decoration: underline;
 }/*# sourceMappingURL=main.css.map */

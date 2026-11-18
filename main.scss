@@ -54,3 +54,21 @@ nav {
 .button-secondary {
   @include button-style($text-color);
 }
+
+nav {
+  ul {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+  }
+
+  a {
+    color: $primary-color;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
