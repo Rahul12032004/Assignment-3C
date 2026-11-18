@@ -106,4 +106,51 @@ body {
   color: white;
   padding: 0.5rem 1rem;
   border-radius: 0.5rem;
+}
+
+.projects {
+  max-width: 75rem;
+  margin-inline: auto;
+  padding: 3rem 2rem;
+}
+.projects h1 {
+  color: #2563eb;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+.projects__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+.projects__card {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 0.25rem 1rem rgba(0, 0, 0, 0.1);
+}
+.projects__card h2 {
+  color: #2563eb;
+  margin-bottom: 0.75rem;
+}
+.projects__card p {
+  margin-bottom: 1rem;
+}
+.projects__card a {
+  display: inline-block;
+  padding: 0.6rem 1rem;
+  background-color: #2563eb;
+  color: white;
+  text-decoration: none;
+  border-radius: 0.4rem;
+  transition: transform 0.3s ease;
+}
+.projects__card a:hover, .projects__card a:focus-visible {
+  transform: translateY(-0.2rem);
+}
+
+@media (max-width: 48rem) {
+  .projects__grid {
+    grid-template-columns: 1fr;
+  }
 }/*# sourceMappingURL=main.css.map */
