@@ -1,4 +1,6 @@
 
+@import "config";
+
 $primary-color: #2563eb;
 $secondary-color: #f1f5f9;
 $text-color: #1e293b;
@@ -34,4 +36,21 @@ nav {
       text-decoration: underline;
     }
   }
+}
+
+@mixin button-style($background-color) {
+  background-color: $background-color;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.button-primary {
+  @include button-style($primary-color);
+}
+
+.button-secondary {
+  @include button-style($text-color);
 }
