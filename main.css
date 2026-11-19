@@ -71,15 +71,6 @@ body {
   line-height: 1.6;
 }
 
-@media (max-width: 40rem) {
-  .site-nav {
-    flex-direction: column;
-  }
-  .site-nav__links {
-    justify-content: center;
-    gap: 1rem;
-  }
-}
 .about {
   max-width: 75rem;
   margin-inline: auto;
@@ -111,46 +102,96 @@ body {
 .projects {
   max-width: 75rem;
   margin-inline: auto;
-  padding: 3rem 2rem;
+  padding: 4rem 2rem;
 }
-.projects h1 {
+.projects__title {
   color: #2563eb;
-  font-size: 2rem;
-  margin-bottom: 2rem;
+  font-size: 2.5rem;
+  margin-block-end: 2rem;
 }
 .projects__grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr));
   gap: 1.5rem;
 }
 .projects__card {
   background-color: white;
   padding: 1.5rem;
   border-radius: 0.75rem;
-  box-shadow: 0 0.25rem 1rem rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0.25rem 1rem rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+.projects__card:hover {
+  transform: translateY(-0.3rem);
 }
 .projects__card h2 {
   color: #2563eb;
-  margin-bottom: 0.75rem;
+  font-size: 1.5rem;
+  margin-block-end: 0.75rem;
 }
 .projects__card p {
-  margin-bottom: 1rem;
+  line-height: 1.6;
+  margin-block-end: 1.5rem;
 }
-.projects__card a {
+.projects__button {
   display: inline-block;
-  padding: 0.6rem 1rem;
+  padding: 0.75rem 1.5rem;
   background-color: #2563eb;
   color: white;
+  border: none;
+  border-radius: 0.5rem;
   text-decoration: none;
-  border-radius: 0.4rem;
+  cursor: pointer;
   transition: transform 0.3s ease;
 }
-.projects__card a:hover, .projects__card a:focus-visible {
+.projects__button:hover, .projects__button:focus-visible {
   transform: translateY(-0.2rem);
 }
 
-@media (max-width: 48rem) {
-  .projects__grid {
+@media (prefers-reduced-motion: reduce) {
+  .projects__card {
+    transition: none;
+  }
+  .projects__card:hover {
+    transform: none;
+  }
+}
+@media (max-width: 40rem) {
+  .site-nav {
+    flex-direction: column;
+  }
+  .site-nav__links {
+    justify-content: center;
+    gap: 1rem;
+  }
+}
+.contact {
+  padding: 3rem 1.5rem;
+  max-width: 70rem;
+  margin-inline: auto;
+}
+.contact h1 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+.contact__list {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(3, 1fr);
+}
+.contact__item {
+  padding: 1.5rem;
+  background-color: white;
+  border-radius: 0.75rem;
+}
+.contact__item h2 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+@media (max-width: 40rem) {
+  .contact__list {
     grid-template-columns: 1fr;
   }
 }/*# sourceMappingURL=main.css.map */
