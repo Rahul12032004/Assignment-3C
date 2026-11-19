@@ -108,30 +108,56 @@ body {
   color: #2563eb;
   font-size: 2.5rem;
   margin-block-end: 2rem;
+  text-align: center;
 }
 .projects__grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1.5rem;
 }
 .projects__card {
-  background-color: white;
-  padding: 1.5rem;
+  position: relative;
+  overflow: hidden;
   border-radius: 0.75rem;
-  box-shadow: 0 0.25rem 1rem rgba(0, 0, 0, 0.08);
-  transition: transform 0.3s ease;
+  background-color: white;
+  box-shadow: 0 0.25rem 1rem rgba(0, 0, 0, 0.12);
 }
-.projects__card:hover {
-  transform: translateY(-0.3rem);
+.projects__card:hover .projects__image, .projects__card:focus-within .projects__image {
+  transform: scale(1.05);
 }
-.projects__card h2 {
-  color: #2563eb;
+.projects__card:hover .projects__details, .projects__card:focus-within .projects__details {
+  opacity: 1;
+  transform: translateY(0);
+}
+.projects__image {
+  display: block;
+  width: 100%;
+  height: 18rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: transform 0.4s ease;
+}
+.projects__details {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.5rem;
+  background-color: rgba(15, 45, 75, 0.92);
+  color: white;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(100%);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+.projects__details h2 {
   font-size: 1.5rem;
-  margin-block-end: 0.75rem;
 }
-.projects__card p {
+.projects__details p {
   line-height: 1.6;
-  margin-block-end: 1.5rem;
 }
 .projects__button {
   display: inline-block;
@@ -147,13 +173,35 @@ body {
 .projects__button:hover, .projects__button:focus-visible {
   transform: translateY(-0.2rem);
 }
+.projects__button {
+  display: inline-block;
+  padding: 0.75rem 1.25rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+}
 
-@media (prefers-reduced-motion: reduce) {
-  .projects__card {
-    transition: none;
+@media (max-width: 55rem) {
+  .projects__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
-  .projects__card:hover {
+}
+@media (max-width: 40rem) {
+  .projects__grid {
+    grid-template-columns: 1fr;
+  }
+}
+@media (hover: none) {
+  .projects__details {
+    position: relative;
+    opacity: 1;
     transform: none;
+    background-color: #2563eb;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .projects__image,
+  .projects__details {
+    transition: none;
   }
 }
 @media (max-width: 40rem) {
