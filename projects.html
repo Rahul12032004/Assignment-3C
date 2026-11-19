@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -5,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Projects | Rahul Kumar</title>
     <link rel="stylesheet" href="main.css" />
+    <script src="menu.js" defer></script>
   </head>
 
   <body>
@@ -12,12 +14,25 @@
       <nav class="site-nav" aria-label="Main navigation">
         <a class="site-nav__logo" href="index.html">RK</a>
 
-        <ul class="site-nav__links">
+        <button
+          class="site-nav__toggle"
+          type="button"
+          aria-label="Toggle navigation"
+          aria-expanded="false"
+          aria-controls="primary-navigation"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <ul class="site-nav__links" id="primary-navigation">
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
           <li>
             <a href="projects.html" aria-current="page">Projects</a>
           </li>
+          <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
     </header>
@@ -29,10 +44,12 @@
         <article class="projects__card">
           <h2>Portfolio Website</h2>
           <p>
-            A responsive portfolio built with HTML, CSS, and Sass to showcase my
-            web development and design skills.
+            A responsive portfolio built with HTML, CSS, and Sass to showcase
+            my web development and design skills.
           </p>
-          <a class="projects__button" href="index.html"> View Project </a>
+          <a class="projects__button" href="index.html">
+            View Project
+          </a>
         </article>
 
         <article class="projects__card">
@@ -41,7 +58,9 @@
             A collection of branding, typography, and visual design projects
             created using Adobe Illustrator.
           </p>
-          <a class="projects__button" href="about.html"> Learn More </a>
+          <a class="projects__button" href="about.html">
+            Learn More
+          </a>
         </article>
 
         <article class="projects__card">
@@ -50,7 +69,9 @@
             Practice projects focused on responsive layouts, modern CSS
             techniques, and interactive interfaces.
           </p>
-          <a class="projects__button" href="index.html"> Explore Work </a>
+          <a class="projects__button" href="index.html">
+            Explore Work
+          </a>
         </article>
       </div>
     </main>

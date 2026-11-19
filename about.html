@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -5,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About | Rahul Kumar</title>
     <link rel="stylesheet" href="main.css" />
+    <script src="menu.js" defer></script>
   </head>
 
   <body>
@@ -12,12 +14,25 @@
       <nav class="site-nav" aria-label="Main navigation">
         <a class="site-nav__logo" href="index.html">RK</a>
 
-        <ul class="site-nav__links">
+        <button
+          class="site-nav__toggle"
+          type="button"
+          aria-label="Toggle navigation"
+          aria-expanded="false"
+          aria-controls="primary-navigation"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <ul class="site-nav__links" id="primary-navigation">
           <li><a href="index.html">Home</a></li>
           <li>
             <a href="about.html" aria-current="page">About</a>
           </li>
           <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
     </header>
