@@ -9,3 +9,19 @@ $font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
 }
+@mixin button-style($background-color) {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: $background-color;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+
+  &:hover,
+  &:focus-visible {
+    transform: translateY(-0.2rem);
+  }
+}
